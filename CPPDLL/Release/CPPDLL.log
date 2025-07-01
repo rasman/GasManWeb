@@ -1,0 +1,46 @@
+﻿  pch.cpp
+  ColorUtils.cpp
+  dllmain.cpp
+  Gas.cpp
+  GasAnes.cpp
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasAnes.cpp(119,32): warning C4244: '=': conversion from 'unsigned long' to 'uint16_t', possible loss of data
+  (compiling source file '/GasAnes.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasAnes.cpp(147,35): warning C4244: '=': conversion from 'unsigned long' to 'uint16_t', possible loss of data
+  (compiling source file '/GasAnes.cpp')
+  
+  GasApplication.cpp
+  GasDoc.cpp
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(242,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(247,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(248,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(715,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(1544,28): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(1569,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(1593,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+D:\dr_sa\GasManWeb\Hal\GasManWeb\CPPDLL\GasDoc.cpp(1923,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/GasDoc.cpp')
+  
+  GasGlobal.cpp
+  GasSample.cpp
+  StringUtils.cpp
+     Creating library D:\dr_sa\GasManWeb\Hal\GasManWeb\Release\CPPDLL.lib and object D:\dr_sa\GasManWeb\Hal\GasManWeb\Release\CPPDLL.exp
+  Generating code
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 2904 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CPPDLL.vcxproj -> D:\dr_sa\GasManWeb\Hal\GasManWeb\Release\CPPDLL.dll

@@ -1,6 +1,5 @@
 ﻿#ifndef GASPTRLIST_H
 #define GASPTRLIST_H
-#include "framework.h"
 
 #include <vector>
 #include <iostream>

@@ -1,31 +1,20 @@
 #pragma once
 
-#ifdef _WIN32
-#define WIN32_LEAN_AND_MEAN // Exclude rarely-used stuff from Windows headers
+#if defined(_WIN32) || defined(_WIN64)
+// Windows-specific
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
 #include <windows.h>
-#define LL_EXPORT __declspec(dllexport)
-#define APIENTRY __stdcall
-#define BOOL bool
-#define HMODULE void*
-#define DWORD unsigned long
-#define LPVOID void*
+
 #elif defined(__APPLE__)
 #include <TargetConditionals.h>
 #if TARGET_OS_MAC
-#include <unistd.h>
+#include <unistd.h> // macOS-specific
 #endif
-#define LL_EXPORT
-#define APIENTRY
-#define BOOL bool
-#define HMODULE void*
-#define DWORD unsigned long
-#define LPVOID void*
+
 #elif defined(__linux__)
-#include <unistd.h>
-#define LL_EXPORT
-#define APIENTRY
-#define BOOL bool
-#define HMODULE void*
-#define DWORD unsigned long
-#define LPVOID void*
+#include <unistd.h> // Linux-specific
+
+#else
+#error "Unsupported platform"
 #endif

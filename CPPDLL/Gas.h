@@ -1,6 +1,5 @@
 ﻿#ifndef GAS_H
 #define GAS_H
-#include "framework.h"
 #include <string>
 #include <cassert>
 #include "GasGlobal.h"

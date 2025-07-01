@@ -1,5 +1,6 @@
 import ctypes
 import os
+from pathlib import Path
 import platform
 import xml.etree.ElementTree as ET
 import pandas as pd
@@ -45,11 +46,13 @@ def serialize_data_with_tags(data):
 def process_file(file_path, output_file=None):
     _, file_extension = os.path.splitext(file_path)
 
-    if file_extension.lower() == '.xml':
+    if file_extension.lower() == '.json':
+        with open(file_path) as f:
+            return json.load(f)
+    elif file_extension.lower() == '.xml':
         data = convert_xml_to_json(file_path)
         print("XML data processed into memory.")
         return data
-    
     elif file_extension.lower() == '.xlsx':
         params_df, settings_df = read_excel_data(file_path)
         params_dict = params_df.to_dict(orient='records')
@@ -81,27 +84,28 @@ def serialize_data(data):
     elif isinstance(data, time):
         return data.strftime("%H:%M:%S")  # Convert to string (HH:MM:SS format)
     else:
-        return 
+        return data
 
 def load_shared_library(lib_name):
     system = platform.system()
-    if system == 'Windows':
-        lib_name += '.dll'
-    elif system == 'Darwin':
-        lib_name += '.dylib'
-    else:
-        lib_name += '.so'
-    lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'compiled', lib_name))
-    if not os.path.isfile(lib_path):
+    ext_map = {'Windows': '.dll', 'Darwin': '.dylib'}
+    lib_ext = ext_map.get(system, '.so')
+    lib_dir = 'x64\Release' if system == 'Windows' else 'compiled'
+
+    lib_path = Path(__file__).resolve().parent / lib_dir / f"{lib_name}{lib_ext}"
+    print(f"Resolved path: {lib_path}")
+
+    if not lib_path.is_file():
         raise FileNotFoundError(f"Cannot find shared library at {lib_path}")
-    return ctypes.CDLL(lib_path)
+    return ctypes.CDLL(str(lib_path))
 
 def process_with_library(data, output_file=None):
-    gas_lib = load_shared_library("libgas")
+    gas_lib = load_shared_library("CPPDLL")
     gas_lib.GasManJsonToCsv.argtypes = [ctypes.c_char_p, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int]
     gas_lib.GasManJsonToCsv.restype = ctypes.c_char_p
 
     # Serialize data to make it JSON-compatible
+    
     serialized_data = serialize_data(data)
     json_data = json.dumps(serialized_data).encode('utf-8')
 
@@ -123,6 +127,8 @@ def process_with_library(data, output_file=None):
 def main(file_path, output_file=None):
     data = process_file(file_path, output_file)
     if data:
+        if 'imageData' in data:
+            del data['imageData']
         process_with_library(data, output_file)
 
 if __name__ == "__main__":

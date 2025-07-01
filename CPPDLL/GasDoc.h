@@ -1,6 +1,6 @@
 #ifndef GASDOC_H
 #define GASDOC_H
-#include "framework.h"
+#include <algorithm>
 #include <string>
 #include <vector>
 #include "Gas.h"

@@ -1,6 +1,5 @@
 ﻿#ifndef GASAPPLICATION_H
 #define GASAPPLICATION_H
-#include "framework.h"
 #include <memory>
 #include <string>
 #include <vector>

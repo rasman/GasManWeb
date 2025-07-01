@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "ColorUtils.h"
 
 RGB ToRGB(const std::string &color) {

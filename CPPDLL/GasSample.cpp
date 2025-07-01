@@ -1,4 +1,5 @@
-﻿#include "GasSample.h"
+﻿#include "pch.h"
+#include "GasSample.h"
 #include "GasDoc.h"
 #include "Gas.h"
 

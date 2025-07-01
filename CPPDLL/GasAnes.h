@@ -1,7 +1,6 @@
 ﻿#ifndef GASANES_H
 #define GASANES_H
 
-#include "framework.h"
 #include "GasGlobal.h"
 #include "GasPtrList.h"
 #include <string>

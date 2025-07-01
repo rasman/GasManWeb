@@ -1,6 +1,5 @@
 ﻿#ifndef GASSAMPLE_H
 #define GASSAMPLE_H
-#include "framework.h"
 #include "GasGlobal.h"
 #include "GasPtrList.h"
 #include <iostream>

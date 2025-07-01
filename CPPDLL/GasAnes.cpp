@@ -1,4 +1,5 @@
-﻿#include "GasAnes.h"
+﻿#include "pch.h"
+#include "GasAnes.h"
 #include <cassert>
 #include <string>
 #include "GasApplication.h"

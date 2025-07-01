@@ -1,6 +1,5 @@
 ﻿#ifndef GASGLOBAL_H
 #define GASGLOBAL_H
-#include "framework.h"
 #include <string>
 #include <vector>
 #include <cmath>

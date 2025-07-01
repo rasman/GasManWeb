@@ -1,4 +1,5 @@
 // StringUtils.cpp
+#include "pch.h"
 #include "StringUtils.h"
 #include <algorithm>
 #include <cctype>

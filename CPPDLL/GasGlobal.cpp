@@ -1,4 +1,5 @@
-﻿#include "GasGlobal.h"
+﻿#include "pch.h"
+#include "GasGlobal.h"
 
 #include <vector>
 #include <string>
