@@ -22,10 +22,11 @@ Several major modifications to the code were made to reduce its footprint while 
 TODOs:
 - Create an Excel template spreadsheet and code to convert XLSX/CSV files to JSON, which can then be run through the application.
 - Verify code works in the Apple/Darwin Environment
-- Fix the makefile to compile in Windows
+- Fix the makefile to compile on Windows
 
-Gasman (https://www.gasmanweb.com/) is the brainchild of Dr James Philips, and if you like this project, please send kudos his way. I appreciate his willingness to share his code with the world.
+Gasman (https://www.gasmanweb.com/) is the brainchild of Dr James (Jim) H. Philip, and if you like this project, please send kudos his way. I appreciate his willingness to share his code with the world.
 Special thanks to Hal Franklin for assisting in getting this project off the ground
 
 Code released under the MIT License.
+
 The use of included headers is governed by the MIT license, and all credit is due to their respective authors (Niels Lohmann and Brodie Thiesfield et al.).
